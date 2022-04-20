@@ -11,12 +11,12 @@ function TweetBox() {
         e.preventDefault();
 
         const tweet = {
-            displayName: 'Mark Mark',
-            username: 'Markkkk',
+            displayName: 'Camilo Rincon',
+            username: 'Rincon10',
             verified: true,
             text: tweetMessage,
             image: tweetImage,
-            avatar: 'https://www.pngfind.com/pngs/m/14-141135_download-mark-zuckerberg-png-image-mark-zuckerberg-transparent.png',
+            avatar: 'https://avatars.githubusercontent.com/u/53798019?v=4',
         };
 
         addTweet(tweet);
@@ -29,7 +29,7 @@ function TweetBox() {
         <div className="tweetBox">
             <form>
                 <div className="tweetBox__input">
-                    <Avatar src="https://www.pngfind.com/pngs/m/14-141135_download-mark-zuckerberg-png-image-mark-zuckerberg-transparent.png" />
+                    <Avatar src="https://avatars.githubusercontent.com/u/53798019?v=4" />
                     <input
                         onChange={e => setTweetMessage(e.target.value)}
                         value={tweetMessage}

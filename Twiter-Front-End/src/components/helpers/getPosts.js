@@ -4,11 +4,11 @@ const generateDefaultTweet = () => {
     const tweets = [];
     const post = {
         displayName: 'display',
-        username: 'Rincon10',
+        username: 'MarkZ',
         verified: true,
-        text: '',
-        image: '',
-        avatar: '',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat excepturi aliquid nulla, labore similique incidunt aliquam perspiciatis distinctio animi officiis tempore, numquam nisi quae adipisci accusamus alias tenetur, minima aspernatur?',
+        image: 'some image',
+        avatar: 'https://www.pngfind.com/pngs/m/14-141135_download-mark-zuckerberg-png-image-mark-zuckerberg-transparent.png',
     };
     for (let times = 0; times < 3; times++) {
         const tweet = {
@@ -17,7 +17,7 @@ const generateDefaultTweet = () => {
             verified: true,
             text: 'tweetMessage' + times,
             image: 'tweetImage' + times,
-            avatar: 'https://www.pngfind.com/pngs/m/14-141135_download-mark-zuckerberg-png-image-mark-zuckerberg-transparent.png',
+            avatar: '',
         };
 
         tweets.push(tweet);
@@ -34,6 +34,7 @@ export const getPosts = async () => {
 };
 
 export const addTweet = tweet => {
+    alert(posts);
     posts[0].push(tweet);
 };
 

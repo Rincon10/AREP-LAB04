@@ -4,7 +4,7 @@ import '../../css/Feed.css';
 import TweetBox from '../TweetBox/TweetBox';
 import Post from '../Post/Post';
 import FlipMove from 'react-flip-move';
-import getPosts from 'components/helpers/getPosts';
+import { getPosts } from 'components/helpers/getPosts';
 
 const Feed = () => {
     const [posts, setPosts] = useState([]);
