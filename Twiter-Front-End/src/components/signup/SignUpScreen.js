@@ -3,7 +3,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import useAuthScreen from 'components/hooks/useAuthScreen';
 import Form from 'components/ui/Form';
 import { Grid } from '@mui/material';
-import '../../css/signup.css';
+import '../../css/Signup.css';
 import validateInfoSignUp from 'components/helpers/validateInfoSignUp';
 
 const theme = createTheme();
