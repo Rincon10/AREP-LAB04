@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../css/Feed.css';
-import TweetBox from '../TweetBox/TweetBox';
+import TweetBox from '../tweetbox/TweetBox';
 
 const Feed = () => {
     return (

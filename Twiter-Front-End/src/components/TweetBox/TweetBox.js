@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../../css/TweetBox.css';
 import { Avatar, Button } from '@material-ui/core';
 import { addTweet } from 'components/helpers/getPosts';
-import Post from '../Post/Post';
+import Post from '../post/Post';
 import FlipMove from 'react-flip-move';
 import usePost from 'components/hooks/usePost';
 
