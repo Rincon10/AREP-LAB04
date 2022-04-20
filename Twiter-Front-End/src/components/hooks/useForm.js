@@ -1,6 +1,7 @@
 import validateInfoLogin from 'components/helpers/validateInfoLogin';
 import { userApiclient } from 'components/services/userApiClient';
 import { types } from 'components/types/types';
+import { UserPool } from 'components/userpool/UserPool';
 import { UserContext } from 'context/UserContext';
 import _ from 'lodash';
 import { useContext, useState } from 'react';
@@ -17,28 +18,22 @@ const useForm = (validateFunction = validateInfoLogin, loginB = true) => {
 
     const [data, setData] = useState(initData);
     const [errors, setErrors] = useState({});
-    const { dispatch } = useContext(UserContext);
+    const { user, dispatch } = useContext(UserContext);
 
-    const login = () => {
-        /*         userApiclient
-            .getToken(data)
-            .then(tokenResponse => {
-                updateUser(tokenResponse);
-            })
-            .catch(() => {
+    const login = () => {};
+
+    const signUp = () => {
+        const { email, password } = user;
+
+        UserPool.signUp(email, password, [], null, (err, data) => {
+            if (err) {
                 swal({
                     title: 'Login',
                     icon: 'error',
-                    text: 'Oops something went wrong. please try again',
+                    text: 'Oops we cant create the user. please try again',
                     timer: '5000',
                 });
-            }); */
-    };
-
-    const signUp = () => {
-        /*         userApiclient
-            .postUser({ ...data, bio: '' })
-            .then(() => {
+            } else {
                 swal({
                     title: 'registered',
                     icon: 'success',
@@ -49,40 +44,8 @@ const useForm = (validateFunction = validateInfoLogin, loginB = true) => {
                 setInterval(() => {
                     window.location.href = '/login';
                 }, 6000);
-            })
-            .catch(() => {
-                swal({
-                    title: 'Login',
-                    icon: 'error',
-                    text: 'Oops we cant create the user. please try again',
-                    timer: '5000',
-                });
-            }); */
-    };
-
-    const updateUser = async t => {
-        const { email } = data;
-
-        userApiclient
-            .getUserByEmail(email, t.token)
-            .then(user => {
-                user['token'] = t.token;
-                setData({});
-                const action = {
-                    type: types.login,
-                    payload: user,
-                };
-                dispatch(action);
-                window.location.href = '/home';
-            })
-            .catch(() => {
-                swal({
-                    title: 'Login',
-                    icon: 'error',
-                    text: 'error',
-                    timer: '5000',
-                });
-            });
+            }
+        });
     };
 
     const handleChange = event => {
