@@ -1,19 +1,17 @@
 import React from 'react';
-import './App.css';
-import Sidebar from './Sidebar';
-import Feed from './Feed';
-import Widgets from './Widgets';
+import './css/App.css';
+import Sidebar from './components/UI/Sidebar';
+import Feed from './components/Feed/Feed';
+/* import Widgets from './components/UI/Widgets'; */
 
-function App() {
+const App = () => {
     return (
         <div className="app">
             <Sidebar />
 
             <Feed />
-
-            <Widgets />
         </div>
     );
-}
+};
 
 export default App;

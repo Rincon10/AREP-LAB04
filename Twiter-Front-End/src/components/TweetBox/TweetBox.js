@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './TweetBox.css';
+import '../../css/TweetBox.css';
 import { Avatar, Button } from '@material-ui/core';
-import db from './firebase';
+import { addTweet } from 'components/helpers/getPosts';
 
 function TweetBox() {
     const [tweetMessage, setTweetMessage] = useState('');
@@ -10,14 +10,16 @@ function TweetBox() {
     const sendTweet = e => {
         e.preventDefault();
 
-        db.collection('posts').add({
+        const tweet = {
             displayName: 'Mark Mark',
             username: 'Markkkk',
             verified: true,
             text: tweetMessage,
             image: tweetImage,
             avatar: 'https://www.pngfind.com/pngs/m/14-141135_download-mark-zuckerberg-png-image-mark-zuckerberg-transparent.png',
-        });
+        };
+
+        addTweet(tweet);
 
         setTweetMessage('');
         setTweetImage('');

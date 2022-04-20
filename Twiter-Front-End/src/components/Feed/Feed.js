@@ -1,18 +1,22 @@
 import React, { useEffect, useState } from 'react';
 
-import './Feed.css';
-import TweetBox from './TweetBox';
-import Post from './Post';
-import db from './firebase';
+import '../../css/Feed.css';
+import TweetBox from '../TweetBox/TweetBox';
+import Post from '../Post/Post';
 import FlipMove from 'react-flip-move';
+import getPosts from 'components/helpers/getPosts';
 
-function Feed() {
+const Feed = () => {
     const [posts, setPosts] = useState([]);
 
+    const loadData = async () => {
+        const res = (await getPosts()) || [];
+        setPosts(res);
+    };
+
     useEffect(() => {
-        db.collection('posts').onSnapshot(snapshot =>
-            setPosts(snapshot.docs.map(doc => doc.data())),
-        );
+        loadData();
+        return () => {};
     }, []);
 
     return (
@@ -38,6 +42,6 @@ function Feed() {
             </FlipMove>
         </div>
     );
-}
+};
 
 export default Feed;
