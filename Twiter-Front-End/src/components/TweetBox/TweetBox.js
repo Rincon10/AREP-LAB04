@@ -14,7 +14,6 @@ function TweetBox() {
 
     useEffect(() => {
         loadData();
-        alert('dd');
         return () => {};
     }, [posts]);
 
