@@ -15,7 +15,7 @@ const LoginScreen = () => {
     ]);
 
     const URL =
-        'https://www.educaciontrespuntocero.com/wp-content/uploads/2019/03/cursos-musica.jpg';
+        'https://play-lh.googleusercontent.com/oaZE2zvOklsacIJfPJmiRtupe-5DTCXdL6Ut1f45_QRwM6C-yymk2ND_SeJJVIKaXg=w720-h310';
 
     const backgroundProperties = {
         backgroundImage: `url(${URL})`,
