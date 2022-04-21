@@ -29,7 +29,6 @@ const AppRouter = () => {
                     {logged && (
                         <Route exact path="/home" component={HomeScreen} />
                     )}
-                    <Route exact path="/home" component={HomeScreen} />
 
                     {!logged && <Redirect to="/login" />}
 
