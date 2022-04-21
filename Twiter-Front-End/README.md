@@ -52,27 +52,29 @@ npm start
 
 #### LogginPage-wrong-password
 
-<img src="../resources/04-LogginPage.png"  />
+<img src="../Resources/04-LogginPage.png"  />
 <br />
-<img src="../resources/04-LogginPage-wrong-password.png"  />
+<img src="../Resources/04-LogginPage-wrong-password.png"  />
 
 ### SignIn
 
-<img src="../resources/04-SignUpPage-0.png"  />
-<img src="../resources/04-SignUpPage-1.png"  />
-<img src="../resources/04-SignUpPage-2.png"  />
+<img src="../Resources/04-SignUpPage-0.png"  />
+<br />
+<img src="../Resources/04-SignUpPage-1.png"  />
+<br />
+<img src="../Resources/04-SignUpPage-2.png"  />
 
 ### Home
 
-<img src="../resources/05-HomePage-0.png"  />
+<img src="../Resources/05-HomePage-0.png"  />
 
 #### AddingATweet
 
-<img src="../resources/06-AddingATweet.png"  />
+<img src="../Resources/06-AddingATweet.png"  />
 
 #### TweetAdded
 
-<img src="../resources/07-TweetAdded.png"  />
+<img src="../Resources/07-TweetAdded.png"  />
 
 ## AWS URL front
 
