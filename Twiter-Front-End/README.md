@@ -129,7 +129,7 @@ Estos son las entidades fundamentales que se almacenan en Amazon S3. Puede utili
 
 Si todo salio correctamente, buscaremos el url de nuestro bucket en propiedades de nuestro S3
 
-<img src="../Resources/10-PoliticaS3-3.png" />
+<img src="../Resources/11-FrontDesplegado.png" />
 
 Veremos nuestra pagina desplegada en AWS
 
@@ -138,11 +138,6 @@ Veremos nuestra pagina desplegada en AWS
 ```
 http://twitterclone-arep.s3-website-us-east-1.amazonaws.com
 ```
-
-<img src="../Resources/11-FrontDesplegado.png" />
-
-<br />
-
 <img src="../Resources/11-FrontDesplegado-2.png" />
 
 ## Autor
