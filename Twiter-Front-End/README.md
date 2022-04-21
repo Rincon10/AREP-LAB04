@@ -76,6 +76,10 @@ npm start
 
 <img src="../Resources/07-TweetAdded.png"  />
 
+### Deploy
+
+[tutorial](https://www.youtube.com/watch?v=s0ZGeSVconI)
+
 ## AWS URL front
 
 ```
