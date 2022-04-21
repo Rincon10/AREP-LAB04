@@ -4,4 +4,6 @@ Para desplegar nuestra aplicacion en ARSW, deberemos desplegar el build en un s3
 Pero primero se debe instalar el CLI de ARSW
 https://www.youtube.com/watch?v=WvFeja2sDZ4
 
+https://www.youtube.com/watch?v=s0ZGeSVconI
+
 INFO: https://www.youtube.com/watch?v=ibZQwg7EP3Q
