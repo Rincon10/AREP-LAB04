@@ -13,6 +13,7 @@ const getTextFields = (
     inputs = [
         ['email', 'Email Address', 'email'],
         ['nickname', 'Nickname', 'text'],
+        ['name', 'Name', 'text'],
         ['password', 'Password', 'password'],
         ['password2', 'Password confirmation', 'password'],
     ],

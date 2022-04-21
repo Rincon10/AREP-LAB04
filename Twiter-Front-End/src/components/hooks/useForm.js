@@ -1,31 +1,33 @@
 import validateInfoLogin from 'components/helpers/validateInfoLogin';
-import { userApiclient } from 'components/services/userApiClient';
-import { types } from 'components/types/types';
+
+/* import { types } from 'components/types/types'; */
 import { UserPool } from 'components/userpool/UserPool';
-import { UserContext } from 'context/UserContext';
+import { UserContext } from 'components/context/UserContext';
 import _ from 'lodash';
 import { useContext, useState } from 'react';
 import swal from 'sweetalert';
+import { types } from 'components/types/types';
 
 //validateFunction must be a customHook
 const useForm = (validateFunction = validateInfoLogin, loginB = true) => {
     const initData = {
         email: '',
         nickname: '',
+        name: '',
         password: '',
         password2: '',
     };
 
     const [data, setData] = useState(initData);
     const [errors, setErrors] = useState({});
-    const { user, dispatch } = useContext(UserContext);
+    const { dispatch } = useContext(UserContext);
 
     const login = () => {};
 
     const signUp = () => {
-        const { email, password } = user;
+        const { email, password, name } = data;
 
-        UserPool.signUp(email, password, [], null, (err, data) => {
+        UserPool.signUp(email, password, name, [], null, (err, dat) => {
             if (err) {
                 swal({
                     title: 'Login',
@@ -33,7 +35,15 @@ const useForm = (validateFunction = validateInfoLogin, loginB = true) => {
                     text: 'Oops we cant create the user. please try again',
                     timer: '5000',
                 });
+                console.log(err);
             } else {
+                console.log(dat);
+                delete data['password2'];
+                const action = {
+                    type: types.login,
+                    payload: data,
+                };
+                dispatch(action);
                 swal({
                     title: 'registered',
                     icon: 'success',

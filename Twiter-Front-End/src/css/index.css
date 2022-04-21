@@ -1,9 +1,9 @@
-* {
-    margin: 0;
-}
-
-*:focus {
-    outline: none;
+:root {
+    --primary-color: #a1313d;
+    --secundary-color: #4a88aa;
+    --inherit-color: white;
+    --error: #f00;
+    --black: #000;
 }
 
 body {
@@ -18,4 +18,8 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
+}
+
+.error {
+    color: var(--error);
 }

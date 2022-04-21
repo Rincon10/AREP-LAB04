@@ -7,6 +7,7 @@ const useAuthScreen = inputs => {
     useEffect(() => {
         const realFields = getTextFields(inputs);
         setFields(realFields);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return { fields };

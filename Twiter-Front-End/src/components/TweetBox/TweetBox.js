@@ -15,6 +15,7 @@ function TweetBox() {
     useEffect(() => {
         loadData();
         return () => {};
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [posts]);
 
     const sendTweet = e => {

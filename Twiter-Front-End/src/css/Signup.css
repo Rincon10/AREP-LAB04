@@ -1,0 +1,9 @@
+.MuiBox-root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.css-164r41r {
+    min-width: 40vw !important;
+}
