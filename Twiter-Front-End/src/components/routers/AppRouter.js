@@ -9,7 +9,7 @@ import {
 import LoginScreen from 'components/login/LoginScreen';
 import SignUpScreen from 'components/signup/SignUpScreen';
 import HomeScreen from 'components/home/HomeScreen';
-import { UserContext } from 'components/context/UserContext';
+import { UserContext } from 'context/UserContext';
 
 const AppRouter = () => {
     const { user } = useContext(UserContext);

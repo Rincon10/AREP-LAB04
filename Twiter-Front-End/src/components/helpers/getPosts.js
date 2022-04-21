@@ -40,7 +40,7 @@ export const getPosts = async () => {
 };
 
 export const addTweet = tweet => {
-    posts.push(tweet);
+    posts.unshift(tweet);
     return posts;
 };
 

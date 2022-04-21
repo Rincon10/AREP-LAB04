@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer } from 'react';
 import authReducer from 'components/auth/authReducer';
 import './css/App.css';
-import { UserContext } from 'components/context/UserContext';
+import { UserContext } from './context/UserContext';
 import AppRouter from 'components/routers/AppRouter';
 
 const App = () => {

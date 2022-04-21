@@ -2,7 +2,7 @@ import validateInfoLogin from 'components/helpers/validateInfoLogin';
 
 /* import { types } from 'components/types/types'; */
 import { UserPool } from 'components/userpool/UserPool';
-import { UserContext } from 'components/context/UserContext';
+import { UserContext } from 'context/UserContext';
 import _ from 'lodash';
 import { useContext, useState } from 'react';
 import swal from 'sweetalert';
@@ -25,9 +25,9 @@ const useForm = (validateFunction = validateInfoLogin, loginB = true) => {
     const login = () => {};
 
     const signUp = () => {
-        const { email, password, name } = data;
+        const { email, password } = data;
 
-        UserPool.signUp(email, password, name, [], null, (err, dat) => {
+        UserPool.signUp(email, password, [], null, (err, dat) => {
             if (err) {
                 swal({
                     title: 'Login',
@@ -40,7 +40,6 @@ const useForm = (validateFunction = validateInfoLogin, loginB = true) => {
                 console.log(dat);
                 delete data['password2'];
                 const action = {
-                    type: types.login,
                     payload: data,
                 };
                 dispatch(action);
@@ -53,7 +52,7 @@ const useForm = (validateFunction = validateInfoLogin, loginB = true) => {
                 setData(initData);
                 setInterval(() => {
                     window.location.href = '/login';
-                }, 6000);
+                }, 5000);
             }
         });
     };
